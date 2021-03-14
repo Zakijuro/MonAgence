@@ -1,0 +1,27 @@
+
+
+        {{ form_start(form)}}
+        <div class="row">
+            <div class="col md-4">Title </br> {{ form_widget(form.title) }}</div>
+            <div class="col md-4">Surface </br> {{ form_widget(form.surface) }}</div>
+            <div class="col md-4">Price </br> {{ form_widget(form.price) }}</div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col md-4">Rooms </br> {{ form_widget(form.rooms) }}</div>
+            <div class="col md-4">Bedrooms </br> {{ form_widget(form.bedrooms) }}</div>
+            <div class="col md-4">Heat </br> {{ form_widget(form.heat) }}</div>
+            <div class="col md-4">Floor </br> {{ form_widget(form.floors) }}</div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col md-4">Address </br> {{ form_widget(form.address) }}</div>
+            <div class="col md-4">City </br> {{ form_widget(form.city) }}</div>
+            <div class="col md-4">Postal Code </br> {{ form_widget(form.postal_code) }}</div>
+            <div class="col md-4">Sold ? </br> {{ form_widget(form.sold) }}</div>
+        </div>
+        </br>
+            {{ form_widget(form) }}
+            </br>
+            <button class='btn btn-primary'>{{ button |default('Enregistrer') }}</button>
+        {{ form_end(form) }}
