@@ -1,9 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="bg-secondary text-center">
+<div class="container" >
+    <div class="container">
+        </br>
+        {{ form_start(form) }}
+        <div class="form-row">
+            <div class="col">
+                
 
-    <h1>Oui il faut ACHETER</h1>
-    <p>Argent</p>
+                {{ form_row(form.minSurface2) }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                {{ form_row(form.maxPrice) }}
+            </div>
+        </div>
+        <div class="col">
+        <button class="btn btn-primary">Rechercher</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+</br>
+<div>
+    <h2 style="text-align: center;">Voici tous nos biens</h2>
+    </br>
+    <div class="row">
+    {% for property in properties %}
+        <div class="col-md-4">
+        {% include 'property/_property.html.twig' %}
+        </div>
+    {% endfor %}
+    </div>
+
+    <div class="pagination" style="width: fit-content; margin-left: auto; margin-right: auto;">
+        {{ knp_pagination_render(properties) }}
+    </div>
 </div>
 {% endblock %}

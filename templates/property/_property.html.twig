@@ -1,0 +1,13 @@
+<div class="card mb-5" style="border: 2px solid blue;">
+    <div class="card-body text-center">
+        <h5 class="card-title">
+            <a href="{{ path('property.show', {slug: property.getSlug, id: property.Id }) }}">
+                {{ property.getTitle }}
+            </a>
+        </h5>
+        <p class="card-text">{{ property.getSurface }}m² - {{ property.getCity }} ({{ property.getPostalCode }})</p>
+        <div class="text-primary" style="font-size: 2rem; font-weight:bold;">
+            {{ property.getFormatedPrice}} €
+        </div>
+    </div>
+</div>
